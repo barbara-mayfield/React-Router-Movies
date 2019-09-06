@@ -33,17 +33,17 @@ function MovieDetails({ movie }) {
   return (
     <Link to={`/movies/${movie.id}`}>
       <div className="movie-card">
-      <h2>{title}</h2>
+      <h2>{movie.title}</h2>
       <div className="movie-director">
-        Director: <em>{director}</em>
+        Director: <em>{movie.director}</em>
       </div>
       <div className="movie-metascore">
-        Metascore: <strong>{metascore}</strong>
+        Metascore: <strong>{movie.metascore}</strong>
       </div>
       <h3>Actors</h3>
 
       {stars.map(star => (
-        <div key={star} className="movie-star">
+        <div key={movie.star} className="movie-star">
           {star}
         </div>
       ))}
